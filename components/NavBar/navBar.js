@@ -9,7 +9,7 @@ const NavBar = ({header}) => {
     // const [header,setHeader] = useState("invisible")
 
     return (
-        <div className={`lg:fixed h-full lg:h-auto text-white-text lg:top-0 w-full border`}>
+        <div className={`lg:absolute h-full lg:h-auto text-white-text lg:top-0 w-full border`}>
 
             <div className="w-full m-auto flex justify-between items-center p-4">
             <Link className="" href={'/'}>
@@ -22,12 +22,12 @@ const NavBar = ({header}) => {
                         />
             </Link>
             
-            <ul className="flex flex-grow justify-end items-center ">
+            <ul className="flex flex-grow justify-end items-center text-p ">
                 <li className="pr-10">
                     <Link href={'/account'}>Account</Link>
                 </li>
             
-                <li className="pr-10">
+                <li className="pr-10 ">
                     <Link href={'/help'}>Help</Link>
                 </li>
                 <li>
