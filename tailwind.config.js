@@ -48,8 +48,13 @@ module.exports = {
       },
       gridTemplateRows: {
         // Complex site-specific row configuration
-        'layout': '75px minmax(50vh,auto) 400px 200px 200px ',
-        'm-layout': '50px 90vh 500px 300px 200px ',
+        'layout': '75px minmax(50vh,auto) 500px 200px 200px ',
+        'm-layout': '75px 90vh 500px 300px 200px ',
+      },
+      gridTemplateColumns: {
+        // Complex site-specific row configuration
+        'v-section': 'repeat(3, minmax(0, 1fr))',
+        'm-v-section': 'auto',
       }
   }
   },

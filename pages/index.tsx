@@ -6,6 +6,7 @@ import Hero from '../components/Hero/hero.js'
 import Footer from '../components/Footer/footer.js'
 import TextBlob from '../components/TextBlob/text_blob'
 import NavBar from '../components/NavBar/navBar.js'
+import Videos from '../components/Videos/videos.js'
 
 
 const Home: NextPage = () => {
@@ -37,7 +38,9 @@ const Home: NextPage = () => {
         
       </div>
       
-      <div className='bg-white-text col-start-1 col-span-5 row-start-3 '>video section</div>
+      <div className='bg-white-text col-start-1 col-span-5 row-start-3 border'>
+        <Videos/>
+      </div>
       
       <div className='bg-white-text col-start-1 col-span-5 row-start-4 '>
       
