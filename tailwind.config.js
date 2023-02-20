@@ -48,7 +48,7 @@ module.exports = {
       },
       gridTemplateRows: {
         // Complex site-specific row configuration
-        'layout': '75px auto 400px 200px 200px ',
+        'layout': '75px minmax(50vh,auto) 400px 200px 200px ',
         'm-layout': '50px 90vh 500px 300px 200px ',
       }
   }

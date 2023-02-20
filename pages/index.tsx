@@ -2,6 +2,8 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
+import NavBar from '../components/NavBar/navBar.js'
+
 
 const Home: NextPage = () => {
   const [header,setHeader] = useState("invisible")
@@ -15,13 +17,17 @@ const Home: NextPage = () => {
   }
 
   return (
-    <div className=" bg-blackish grid grid-rows-m-layout md:grid-rows-layout grid-cols-5 gap-1 min-h-screen ">
-      <div className={`bg-redish col-start-1 col-span-3 md:col-span-5 row-start-1 row-span-5 md:row-span-1 ${header} md:visible z-10`}>header</div>
+    <div className=" bg-blackish grid grid-rows-m-layout lg:grid-rows-layout grid-cols-5 gap-1 min-h-screen w-full ">
+      <div className={` col-start-1 col-span-3 lg:col-span-5 row-start-1 row-span-5 lg:row-span-1 ${header} lg:visible z-10`}>
 
-      <div className=' bg-blueish col-start-1 col-span-5 row-start-1 md:row-start-2 md:row-span-1 row-span-2'>
+        <NavBar header={header}/>
+      </div>
+      {/* <NavBar header={header}/> */}
+
+      <div className=' bg-blueish col-start-1 col-span-5 row-start-1  row-span-2  '>
         hero
-        <button onClick={toggleHeader} className=' m:hidden float-right'>
-          toggle header
+        <button onClick={toggleHeader} className="lg:invisible float-right">
+          Click Me
         </button>
       </div>
       
