@@ -1,27 +1,53 @@
-# Next.js + Tailwind CSS Example
+# Next Example
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.2)](https://tailwindcss.com/blog/tailwindcss-v3-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+Enjoy!
+Videos are rendered using next.js horizontal snap scroll 
 
-## Deploy your own
+## Furtther Functionality
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+### Login & Logout
+If a user isn't logged in they will be pushed to the Login page using `useRouter` hook.  Upon login the user will be sent to homepage, where they can access their account and all other pages. When the user does logout, a logout popup will display a message for a brief moment then redirect to the login page.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+### State Management
+To manage state for this app I'd use hooks such as:
+useState: to create and maniplate state within components.
+useEfect: to help manage side efects 
+useContext: `useContext` and `createContext` will be used to create and establish the app context. Properlly using an `AuthProvider` comp that wraps an `AuthContext.Provider` element for the around app make sure that the app and its component can always access the context and its state.`useAuth` and`useRouter` will be used to authenticate users, if no user is present authenticated or logged in, `useRouter`will push user to a login page, see eampls code snippet:
 
-## How to use
+```jsx
+import { useAuth } from '../contexts/AuthContext';
+import { useRouter } from 'next/router';
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+function Profile() {
+  const { user } = useAuth();
+  const router = useRouter();
 
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
+  if (!user) {
+    router.push('/login');
+    return null;
+  }
+
+  return (
+    <div>
+      <h1>Profile Page</h1>
+      <p>Welcome, {user.name}!</p>
+    </div>
+  );
+}
+
+export default Profile;
 ```
 
-```bash
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-```
+----
 
-```bash
-pnpm create next-app --example with-tailwindcss with-tailwindcss-app
-```
+## Disclaimers 
+### Jest
+My testing isn't as strong, and could be better implemented within this mockup. A little more review is needed on my end.
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+### Video Rendering
+I guessed on how to render the videos, a snap side scroll seemeded like the less bulky option that would eleviate alot of scolling. I wanted to do buttons that toggled between `next video` & `previous video` by updating a hook that kept trcak of the cuurrent video by using its index. `onClick` that index would be updated and the video information would update inside the component. The original mock didnt include buttons so I didnt want to add them, so this is what I came up with
+
+### Mobile Menu
+I didnt style the mobile menu completely, but I built out the layout to show how I would handle it.
+
+This was my first time using Next.js & Tailwind

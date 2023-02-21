@@ -7,7 +7,7 @@ const Videos = () => {
     const [visible, setVisibility] = useState("visible");
     const [vid_res, setRes] = useState(null)
     const [currentVid, setcurrentVid] = useState(0)
-
+    
     useEffect(() => {
         axios({
             'method': 'POST',
@@ -26,9 +26,6 @@ const Videos = () => {
             }
         }).then((_res) => {
             setRes((_res.data.data.getVids))
-            // console.log(ref.current.clientHeight)
-            
-
         }).catch((e) => console.log(e))
 
       },[])
@@ -82,9 +79,9 @@ const Videos = () => {
 
 
     return (
-        <div className='flex snap-x snap-mandatory h-full overflow-x-scroll overflow-y-hidden lg:px-20'>
+        <main name='video-list' className='flex snap-x snap-mandatory h-full overflow-x-scroll overflow-y-hidden lg:px-20'>
             <VideoList videos={vid_res!=null?vid_res:[]}/> 
-        </div>
+        </main>
     );
 };
 
