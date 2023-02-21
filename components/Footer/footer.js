@@ -6,7 +6,7 @@ import Image from 'next/image'
 const Footer = () => {
     return (
         <footer className="flex flex-col  h-full justify-start w-full ">
-          <div className="flex justify-start w-full py-s-space">
+          <div className="flex justify-start w-full pb-s-space">
             <ul className=" w-2/12 h-full text-blueish leading-link pb-s-space">
             <h1 className="text-p text-redish font-bold py-h-space">Fakesite</h1>
               <li>

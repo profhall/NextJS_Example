@@ -51,7 +51,7 @@ const Videos = () => {
         // return(
             vids= videos.map((video)=>{
                 return(
-                <div className='snap-center shrink-0 grid w-full h-full gap-5 lg:grid-rows-v-section grid-cols-m-v-section lg:grid-cols-v-section lg:mx-20'>
+                <div key={video.id} className='snap-center shrink-0 grid w-full h-full gap-5 lg:grid-rows-v-section grid-cols-m-v-section lg:grid-cols-v-section lg:mx-20'>
 
                     <div className='lg:row-start-1 row-span-2 h-full lg:col-span-2 col-span-1 row-start-2 mx-10 '>
                         
@@ -63,8 +63,8 @@ const Videos = () => {
                         </div>
                     </div>
                     
-                    <div style={{ background: `url(${video.thumbnail_large}) no-repeat center`}} className='lg:col-start-3 col-span-1 text-center aspect-video border'>
-                        <div  className='justify-center flex-col flex bg-gradient-to-b from-gradient-t/50 to-gradient-b/50 h-full'>
+                    <div style={{ background: `url(${video.thumbnail_large}) no-repeat center`}} className='lg:col-start-3 col-span-1 text-center aspect-video'>
+                        <div  className='justify-center flex-col aspect-video flex bg-gradient-to-b from-gradient-t/50 to-gradient-b/50 h-full '>
                             <a className=" self-center " target="_blank" href={`${video.url}`}>
                                 <Image
                                     priority
@@ -87,7 +87,7 @@ const Videos = () => {
 
 
     return (
-        <div className='flex snap-x snap-mandatory h-full overflow-x-scroll overflow-y-hidden px-20'>
+        <div className='flex snap-x snap-mandatory h-full overflow-x-scroll overflow-y-hidden lg:px-20'>
             <VideoList videos={vid_res!=null?vid_res:[]}/> 
         </div>
     );
