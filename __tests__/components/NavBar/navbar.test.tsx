@@ -1,4 +1,5 @@
 import Hero from '@/components/Hero/hero';
+import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 import NavBar from '@/components/NavBar/navBar';
 
