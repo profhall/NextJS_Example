@@ -9,7 +9,7 @@ const NavBar = ({header}) => {
     // const [header,setHeader] = useState("invisible")
 
     return (
-        <div className={`lg:absolute h-full lg:h-auto text-white-text lg:top-0 w-full border`}>
+        <div className={`lg:absolute h-full lg:h-auto text-white-text lg:top-0 w-full`}>
 
             <div className="w-full m-auto flex justify-between items-center p-4">
             <Link className="" href={'/'}>
@@ -35,10 +35,10 @@ const NavBar = ({header}) => {
                         <Image
                             priority
                             src="/images/profile.jpg"
-                            className="borderCircle"
                             height={50}
                             width={50}
                             alt=""
+                            className='rounded-full'
                         />
                     </Link>
                 </li>

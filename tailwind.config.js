@@ -11,7 +11,7 @@ module.exports = {
       'blackish': '#4c4c51',
       'blueish': '#88939e',
       'gradient-t': '#ee2e1d',
-      'gradient-b': '#ee2e1d',
+      'gradient-b': '#ffb1b5',
       'horizontal_color': '#e8e8e8',
       'white-text': '#FFF'
     },
@@ -48,8 +48,8 @@ module.exports = {
       },
       gridTemplateRows: {
         // Complex site-specific row configuration
-        'layout': '75px minmax(50vh,auto) 500px 200px 200px ',
-        'm-layout': '75px 90vh 500px 300px 200px ',
+        'layout': '75px minmax(50vh,auto) 350px 200px 200px ',
+        'm-layout': '75px 90vh 600px minmax(300px,auto) 200px ',
       },
       gridTemplateColumns: {
         // Complex site-specific row configuration

@@ -26,7 +26,7 @@ const Home: NextPage = () => {
   }
 
   return (
-    <div className="grid grid-rows-m-layout lg:grid-rows-layout grid-cols-5 gap-1 min-h-screen w-full ">
+    <div className="grid grid-rows-m-layout lg:grid-rows-layout grid-cols-5 lg:gap-20 min-h-screen w-full ">
       <div className={` col-start-1 col-span-3 lg:col-span-5 row-start-1 row-span-5 lg:row-span-1 ${header} lg:visible z-10`}>
 
         <NavBar header={header}/>
@@ -38,8 +38,9 @@ const Home: NextPage = () => {
         
       </div>
       
-      <div className='bg-white-text col-start-1 col-span-5 row-start-3 border'>
+      <div className='bg-white-text col-start-1 col-span-5 row-start-3 '>
         <Videos/>
+        
       </div>
       
       <div className='bg-white-text col-start-1 col-span-5 row-start-4 '>
@@ -47,7 +48,7 @@ const Home: NextPage = () => {
       <TextBlob blob_message={blob_mess} blob_head={blob_head}  />
       </div>
     
-      <div className='bg-white-text col-start-1 col-span-5 row-start-5 px-20  pt-s-space'>
+      <div className='bg-white-text col-start-1 col-span-5 row-start-5 px-20  pt-s-space '>
         <Footer/>
       </div>
     </div>
