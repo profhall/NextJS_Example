@@ -48,8 +48,8 @@ module.exports = {
       },
       gridTemplateRows: {
         // Complex site-specific row configuration
-        'layout': '75px minmax(50vh,auto) 350px 200px 200px ',
-        'm-layout': '75px 90vh 600px minmax(300px,auto) 200px ',
+        'layout': '75px minmax(50vh,auto) 400px 200px 200px ',
+        'm-layout': '75px 90vh 600 minmax(300px,auto) 200px ',
       },
       gridTemplateColumns: {
         // Complex site-specific row configuration
