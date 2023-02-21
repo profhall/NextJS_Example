@@ -87,7 +87,7 @@ const Videos = () => {
 
 
     return (
-        <div className='flex snap-x snap-mandatory h-full overflow-x-scroll overflow-y-hidden px-20'>
+        <div className='flex snap-x snap-mandatory h-full overflow-x-scroll overflow-y-hidden lg:px-20'>
             <VideoList videos={vid_res!=null?vid_res:[]}/> 
         </div>
     );
