@@ -42,7 +42,7 @@ export default Profile;
 
 ## Disclaimers 
 ### Jest
-My testing isn't as strong, and could be better implemented within this mockup. A little more review is needed on my end.
+My testing isn't as strong, and could be better implemented within this mockup. A little more review is needed on my end. The testing for the Vieo section dosent pass and I know why,but I'm not sure how to fix it, it's due to the data fetching 
 
 ### Video Rendering
 I guessed on how to render the videos, a snap side scroll seemeded like the less bulky option that would eleviate alot of scolling. I wanted to do buttons that toggled between `next video` & `previous video` by updating a hook that kept trcak of the cuurrent video by using its index. `onClick` that index would be updated and the video information would update inside the component. The original mock didnt include buttons so I didnt want to add them, so this is what I came up with

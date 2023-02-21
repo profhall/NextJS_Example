@@ -41,7 +41,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="flex items-center w-full justify-center border-t pt-4">
+          <div className="flex items-center w-full text-blueish justify-center border-t border-horizontal_color pt-4">
             <a className="flex  items-center justify-center " href="/">
               <Image height={45} width={45} src="/assets/logo.png" alt="Logo"  />
             </a>
