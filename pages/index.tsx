@@ -26,7 +26,7 @@ const Home: NextPage = () => {
   }
 
   return (
-    <div className="grid grid-rows-m-layout lg:grid-rows-layout grid-cols-5 lg:gap-20 min-h-screen w-full ">
+    <main className="grid grid-rows-m-layout lg:grid-rows-layout grid-cols-5 lg:gap-[40px] min-h-screen w-full ">
       <div className={` col-start-1 col-span-3 lg:col-span-5 row-start-1 row-span-5 lg:row-span-1 ${header} lg:visible z-10`}>
 
         <NavBar header={header}/>
@@ -48,10 +48,10 @@ const Home: NextPage = () => {
       <TextBlob blob_message={blob_mess} blob_head={blob_head}  />
       </div>
     
-      <div className='bg-white-text col-start-1 col-span-5 row-start-5 px-20  pt-s-space '>
+      <div className='bg-white-text col-start-1 col-span-5 row-start-5 px-20  '>
         <Footer/>
       </div>
-    </div>
+    </main>
   )
 }
 

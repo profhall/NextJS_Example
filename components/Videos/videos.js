@@ -63,8 +63,8 @@ const Videos = () => {
                         </div>
                     </div>
                     
-                    <div style={{ background: `url(${video.thumbnail_large}) no-repeat center`}} className='lg:col-start-3 col-span-1 text-center aspect-video border'>
-                        <div  className='justify-center flex-col flex bg-gradient-to-b from-gradient-t/50 to-gradient-b/50 h-full'>
+                    <div style={{ background: `url(${video.thumbnail_large}) no-repeat center`}} className='lg:col-start-3 col-span-1 text-center aspect-video'>
+                        <div  className='justify-center flex-col aspect-video flex bg-gradient-to-b from-gradient-t/50 to-gradient-b/50 h-full '>
                             <a className=" self-center " target="_blank" href={`${video.url}`}>
                                 <Image
                                     priority
