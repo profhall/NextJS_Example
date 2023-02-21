@@ -53,4 +53,4 @@ The gradient box needs a little more work, I could not get the ratio to stick wi
 ### Mobile Menu
 I didn't style the mobile menu completely, but I built out the layout to show how I would handle it.
 
-This was my first time using Next.js & Tailwind
+## This was my first time using Next.js & Tailwind
