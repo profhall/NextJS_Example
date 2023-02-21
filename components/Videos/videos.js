@@ -33,11 +33,6 @@ const Videos = () => {
 
       },[])
 
-      useEffect(() => {
-        console.log(vid_res);
-        // VideoList(vid_res)
-        // getSize()
-      },[vid_res])
 
       const videoNav = (currentVid,direction) =>{
         direction === "next"? setRes(currentVid+1):setRes(currentVid-1)
