@@ -9,10 +9,10 @@ const NavBar = ({header}) => {
     // const [header,setHeader] = useState("invisible")
 
     return (
-        <div className={`lg:absolute h-full lg:h-auto text-white-text lg:top-0 w-full`}>
+        <div className={`lg:absolute h-full lg:h-auto text-white-text lg:top-0 w-full lg:bg-opacity-0 bg-blackish`}>
 
-            <div className="w-full m-auto flex justify-between items-center p-4">
-            <Link className="" href={'/'}>
+            <div className="w-full m-auto lg:flex-row flex-col flex justify-between items-center p-4">
+            <Link className="lg:visible collapse " href={'/'}>
             <Image
                             priority
                             src="/assets/logo.png"
@@ -22,15 +22,15 @@ const NavBar = ({header}) => {
                         />
             </Link>
             
-            <ul className="flex flex-grow justify-end items-center text-p ">
-                <li className="pr-10">
+            <ul className="flex lg:flex-row flex-col w-full h-[500px] justify-evenly lg:h-auto lg:w-auto lg:justify-end items-center text-p ">
+                <li className="lg:pr-10  lg:py-0">
                     <Link href={'/account'}>Account</Link>
                 </li>
             
-                <li className="pr-10 ">
+                <li className="lg:pr-10  lg:py-0 ">
                     <Link href={'/help'}>Help</Link>
                 </li>
-                <li>
+                <li className=''>
                     <Link href="/account">
                         <Image
                             priority

@@ -51,7 +51,7 @@ const Videos = () => {
         // return(
             vids= videos.map((video)=>{
                 return(
-                <div className='snap-center shrink-0 grid w-full h-full gap-5 lg:grid-rows-v-section grid-cols-m-v-section lg:grid-cols-v-section lg:mx-20'>
+                <div key={video.id} className='snap-center shrink-0 grid w-full h-full gap-5 lg:grid-rows-v-section grid-cols-m-v-section lg:grid-cols-v-section lg:mx-20'>
 
                     <div className='lg:row-start-1 row-span-2 h-full lg:col-span-2 col-span-1 row-start-2 mx-10 '>
                         
