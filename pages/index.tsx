@@ -12,10 +12,10 @@ import Videos from '../components/Videos/videos.js'
 const Home: NextPage = () => {
   const [header,setHeader] = useState("invisible")
   const blob_head = useState("Ready to have your cake and eat it too?")
-  const blob_mess = useState("Start by designing the esperience you have in mind. We'll guide you through each step. If you esperience meets the quality standards, you'll more hear about what's next.")
+  const blob_mess = useState("Start by designing the experience you have in mind. We'll guide you through each step. If your experience meets the quality standards, you'll hear more about what's next.")
   const cta_button = useState("Do something awesome")
   const hero_head = useState("The worlds greatest fake site")
-  const hero_mess = useState("Create the worlds greatest fake site and enjoy the breeze of fresh air while you complete it")
+  const hero_mess = useState("Create the worlds greatest fake site and enjoy the breeze of fresh air while you complete it.")
   
   useEffect(() => {
     console.log(header)
